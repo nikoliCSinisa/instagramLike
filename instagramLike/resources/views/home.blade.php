@@ -15,11 +15,11 @@
                 <div class="pr-5"><strong>23k</strong> followers</div>
                 <div class="pr-5"><strong>212</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">InstagramLike.org</div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate, erat id elementum pulvinar, neque orci volutpat nibh, quis rhoncus massa justo id felis.
+                {{ $user->profile->description }}
             </div>
-            <div><a href="#">www.instagramlike.org</a></div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
         
         <div class="row pt-5">
