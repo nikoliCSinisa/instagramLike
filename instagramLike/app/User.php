@@ -37,6 +37,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // When user register create blank profile for that user
+    protected static function boot(){
+        
+        parent::boot(); 
+
+        static::created( function( $user ){
+            $user->profile()->create([
+                'title' => $user->username
+            ]);
+        } );
+    }
+
     // connection between user and posts
 
     public function posts(){

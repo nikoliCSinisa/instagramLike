@@ -9,7 +9,16 @@
 
         <div class="col-4">
             <div>
-                <h3> {{ $post->user->username }} </h3>
+                <div class="d-flex align-items-center">
+                    <div class="pr-3">
+                        <img src="/storage/{{ $post->user->profile->image }}" class="w-100" style="max-width: 40px;">
+                    </div>
+                    <div>
+                        <div class="font-weight-bold">{{ $post->user->username }}</div>
+                    </div>
+                </div>
+
+                <hr>
 
                 <p> {{ $post->caption }} </p>
             </div>
